@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read -p "Enter AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
+read -p "Enter AWS_SECRET_ACCESS_KEY: " AWS_SECRET_ACCESS_KEY
+read -p "Enter Elastic IP resource ID: " EIP_ID
+
+terraform import -var="access_key=$AWS_ACCESS_KEY_ID" -var="secret_key=$AWS_SECRET_ACCESS_KEY" aws_eip.e $EIP_ID

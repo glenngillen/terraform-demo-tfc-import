@@ -1,0 +1,4 @@
+#!/bin/bash
+
+read -p "Enter Elastic IP resource ID: " EIP_ID
+terraform import aws_eip.e $EIP_ID
